@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp"
+    android:backgroundTint="@color/background_card">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- Type Indicator -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/typeIndicator"
+            android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="0dp"
+            android:layout_marginEnd="15dp" />
+
+        <!-- Content Container -->
+        <LinearLayout
+            android:id="@+id/contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/typeIndicator"
+            android:layout_toStartOf="@id/buttonContainer"
+            android:orientation="vertical">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transaction Title"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <!-- Category and Date -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/categoryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:background="@drawable/category_badge"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01 Jan 2024"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center_vertical" />
+
+            </LinearLayout>
+
+            <!-- Amount -->
+            <TextView
+                android:id="@+id/amountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹1000.00"
+                android:textSize="22sp"
+                android:textColor="@color/income_green"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/editButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_edit"
+                android:background="@drawable/button_circle"
+                android:tint="@color/blue_accent"
+                android:layout_marginBottom="8dp" />
+
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_delete"
+                android:background="@drawable/button_circle"
+                android:tint="@color/expense_red" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

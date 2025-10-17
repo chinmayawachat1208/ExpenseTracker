@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- Animated Bubble Background -->
+    <com.expensetracker.app.views.BubbleView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Header -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp">
+
+                <ImageButton
+                    android:id="@+id/backButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_circle"
+                    android:src="@android:drawable/ic_menu_revert"
+                    android:tint="@color/text_primary"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Transaction"
+                    android:textSize="24sp"
+                    android:textColor="@color/text_primary"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_centerInParent="true" />
+
+            </RelativeLayout>
+
+            <!-- Type Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transaction Type"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="10dp" />
+
+            <RadioGroup
+                android:id="@+id/typeGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="25dp">
+
+                <RadioButton
+                    android:id="@+id/incomeRadio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Income"
+                    android:textColor="@color/income_green"
+                    android:buttonTint="@color/income_green"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/expenseRadio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Expense"
+                    android:textColor="@color/expense_red"
+                    android:buttonTint="@color/expense_red"
+                    android:textSize="16sp"
+                    android:padding="12dp" />
+
+            </RadioGroup>
+
+            <!-- Title Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:boxBackgroundColor="@color/background_card"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxStrokeColor="@color/purple_primary"
+                app:hintTextColor="@color/purple_light">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/titleInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Title"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint"
+                    android:padding="15dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Amount Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:boxBackgroundColor="@color/background_card"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxStrokeColor="@color/purple_primary"
+                app:hintTextColor="@color/purple_light"
+                app:prefixText="₹ ">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amountInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Amount"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint"
+                    android:padding="15dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Category Spinner -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="10dp" />
+
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/spinner_background"
+                android:padding="15dp"
+                android:layout_marginBottom="20dp"
+                android:popupBackground="@color/background_card" />
+
+            <!-- Date Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:boxBackgroundColor="@color/background_card"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxStrokeColor="@color/purple_primary"
+                app:hintTextColor="@color/purple_light"
+                app:endIconMode="custom"
+                app:endIconDrawable="@android:drawable/ic_menu_my_calendar"
+                app:endIconTint="@color/purple_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dateInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:hint="Date"
+                    android:padding="19dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Note Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                app:boxBackgroundColor="@color/background_card"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxStrokeColor="@color/purple_primary"
+                app:hintTextColor="@color/purple_light">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/noteInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Note (Optional)"
+                    android:minLines="3"
+                    android:gravity="top"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint"
+                    android:padding="15dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Save Transaction"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_gradient"
+                android:elevation="8dp"
+                android:layout_marginBottom="20dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

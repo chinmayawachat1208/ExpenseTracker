@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors - Purple to Blue Gradient -->
+    <color name="purple_primary">#6C63FF</color>
+    <color name="purple_dark">#5548C8</color>
+    <color name="purple_light">#8B83FF</color>
+
+    <color name="blue_accent">#00D4FF</color>
+    <color name="blue_light">#5DE3FF</color>
+    <color name="blue_dark">#00A8CC</color>
+
+    <!-- Income/Expense Colors -->
+    <color name="income_green">#00E676</color>
+    <color name="income_green_light">#69F0AE</color>
+    <color name="income_bg">#1A00E676</color>
+
+    <color name="expense_red">#FF5252</color>
+    <color name="expense_red_light">#FF8A80</color>
+    <color name="expense_bg">#1AFF5252</color>
+
+    <!-- Background Colors -->
+    <color name="background_dark">#0F0F1E</color>
+    <color name="background_card">#1A1A2E</color>
+    <color name="background_gradient_start">#0F0F1E</color>
+    <color name="background_gradient_end">#1F1F3A</color>
+
+    <!-- Bubble Colors (with transparency) -->
+    <color name="bubble_purple">#3D6C63FF</color>
+    <color name="bubble_blue">#3D00D4FF</color>
+    <color name="bubble_pink">#3DFF6090</color>
+    <color name="bubble_green">#3D00E676</color>
+    <color name="bubble_orange">#3DFFA726</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B3B3B3</color>
+    <color name="text_hint">#666666</color>
+
+    <!-- Common Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+</resources>
